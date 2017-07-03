@@ -47,3 +47,27 @@ function assets() {
 
 }
 add_action( 'wp_enqueue_scripts', 'assets', 100 );
+
+// ACF Sync Fields
+add_filter('acf/settings/save_json', 'acf_json_save_point');
+
+function acf_json_save_point( $path ) {
+    // update path
+    $path = get_stylesheet_directory() . '/acf-fields';
+
+    // return
+    return $path;
+}
+
+add_filter('acf/settings/load_json', 'acf_json_load_point');
+
+function acf_json_load_point( $paths ) {
+    // remove original path (optional)
+    unset($paths[0]);
+
+    // append path
+    $paths[] = get_stylesheet_directory() . '/acf-fields';
+
+    // return
+    return $paths;
+}
