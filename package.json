@@ -10,8 +10,10 @@
   "author": "ZURB <foundation@zurb.com>",
   "license": "MIT",
   "dependencies": {
-    "foundation-sites": "6.4.0",
-    "motion-ui": "~1.2.2"
+    "foundation-sites": "6.4.1",
+    "jquery": "^3.2.1",
+    "motion-ui": "~1.2.2",
+    "what-input": "^4.3.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
