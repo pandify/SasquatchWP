@@ -45,26 +45,26 @@ function clean(done) {
 
 function revision_css() {
 	return gulp.src([ PATHS.dist + '/css/*.css' ], {base: PATHS.dist + '/css' })
-  .pipe(gulp.dest(PATHS.dist + '/css' ))
+  .pipe($.if(PRODUCTION, gulp.dest(PATHS.dist + '/css' )))
   .pipe($.if(PRODUCTION, $.rev() ))
-  .pipe(gulp.dest(PATHS.dist + '/css'))
-  .pipe($.rev.manifest( PATHS.dist +'/manifest.json', {
+  .pipe($.if(PRODUCTION, gulp.dest(PATHS.dist + '/css')))
+  .pipe($.if(PRODUCTION, $.rev.manifest( PATHS.dist +'/manifest.json', {
     base: PATHS.dist,
     merge: true
-  } ))
-  .pipe(gulp.dest(PATHS.dist));
+  } )))
+  .pipe($.if(PRODUCTION, gulp.dest(PATHS.dist)));
 }
 
 function revision_js() {
 	return gulp.src([ PATHS.dist + '/js/*.js' ], {base: PATHS.dist + '/js' })
-  .pipe(gulp.dest(PATHS.dist + '/js' ))
+  .pipe($.if(PRODUCTION, gulp.dest(PATHS.dist + '/js' )))
   .pipe($.if(PRODUCTION, $.rev() ))
-  .pipe(gulp.dest(PATHS.dist + '/js'))
-  .pipe($.rev.manifest( PATHS.dist +'/manifest.json', {
+  .pipe($.if(PRODUCTION, gulp.dest(PATHS.dist + '/js')))
+  .pipe($.if(PRODUCTION, $.rev.manifest( PATHS.dist +'/manifest.json', {
     base: PATHS.dist,
     merge: true
-  } ))
-  .pipe(gulp.dest(PATHS.dist));
+  } )))
+  .pipe($.if(PRODUCTION, gulp.dest(PATHS.dist)));
 }
 
 // Copy files out of the assets folder
