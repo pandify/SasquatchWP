@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import whatInput from 'what-input';
-import Foundation from 'foundation-sites';
+import foundation from 'foundation-sites';
 import Router from './lib/router';
 
 // Routes
