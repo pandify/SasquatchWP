@@ -1,16 +1,16 @@
 {
-  "name": "foundation-zurb-template",
-  "version": "1.0.0",
-  "description": "Official ZURB Template for Foundation for Sites.",
+  "name": "sasquatch-wp",
+  "version": "1.0.1",
+  "description": "Foundation and Timber for WordPress",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
     "build": "gulp build --production"
   },
-  "author": "ZURB <foundation@zurb.com>",
+  "author": "Maciej Palmowski <m.palmowski@spiders.agency>",
   "license": "MIT",
   "dependencies": {
-    "foundation-sites": "6.4.1",
+    "foundation-sites": "^6.4.1",
     "jquery": "^3.2.1",
     "motion-ui": "~1.2.2",
     "what-input": "^4.3.0"
@@ -48,11 +48,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zurb/foundation-zurb-template.git"
+    "url": "https://github.com/pandify/SasquatchWP.git"
   },
   "bugs": {
-    "url": "https://github.com/zurb/foundation-sites/issues",
-    "email": "foundation@zurb.com"
+    "url": "https://github.com/pandify/SasquatchWP/issues",
+    "email": "hello@spiders.agency"
   },
   "babel": {
     "presets": [
