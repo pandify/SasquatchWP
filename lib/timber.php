@@ -25,3 +25,17 @@ function add_to_context( $data ){
    return $data;
 }
 add_filter( 'timber_context', 'add_to_context' );
+
+/**
+ * Config vars
+ */
+
+function add_to_config( $data ) {
+  /**
+   * Example
+   * $data['config']['name'] = 'value'l
+   */
+  return $data;
+}
+
+add_filter( 'timber_context', 'add_to_config' );

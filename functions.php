@@ -16,3 +16,15 @@ foreach ( $sage_includes as $file ) {
 
 	require_once $filepath;
 }
+
+/**
+ * Sober Intervention - cleaning wp-admin
+ * more info on https://github.com/soberwp/intervention
+ */
+use function Sober\Intervention\intervention;
+
+if ( function_exists( 'Sober\Intervention\intervention' ) ) {
+  intervention( 'add-acf-page', 'Theme Options', [ 'administrator' ] );
+  intervention( 'add-dashboard-redirect' );
+  intervention( 'add-svg-support' );
+}
