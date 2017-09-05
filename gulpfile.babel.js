@@ -68,7 +68,7 @@ function revision_js() {
 }
 
 // Copy files out of the assets folder
-// This task skips over the "img", "js", and "scss" folders, which are parsed separately
+// This task skips over the "images", "js", and "scss" folders, which are parsed separately
 function copy() {
   return gulp.src(PATHS.assets)
     .pipe(gulp.dest(PATHS.dist + '/'));
@@ -128,7 +128,7 @@ function images() {
     .pipe($.if(PRODUCTION, $.imagemin({
       progressive: true
     })))
-    .pipe(gulp.dest(PATHS.dist + '/img'));
+    .pipe(gulp.dest(PATHS.dist + '/images'));
 }
 
 // Start a server with BrowserSync to preview the site in
