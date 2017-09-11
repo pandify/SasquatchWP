@@ -10,6 +10,7 @@ To use this template, your computer needs:
 
 ```bash
 cd projectname
+composer install
 npm install
 ```
 
